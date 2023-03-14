@@ -1,18 +1,6 @@
 {
   "products": [
     {
-      "name": "Sản phẩm vừa thêm 1 updated",
-      "price": "123456",
-      "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-      "id": 1
-    },
-    {
-      "name": "Sản phẩm 1",
-      "price": "139.00",
-      "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-      "id": 2
-    },
-    {
       "name": "Sản phẩm vừa thêm 1",
       "price": "139.00",
       "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
@@ -34,12 +22,10 @@
       "id": 6
     },
     {
-      "id": 7
+      "name": "New Product 456789",
+      "price": "139.00",
+      "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+      "id": 8
     }
-  ],
-  "categories": [
-    {},
-    {},
-    {}
   ]
 }
