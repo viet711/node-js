@@ -22,10 +22,14 @@
       "id": 6
     },
     {
-      "name": "New Product 456789",
+      "id": 7
+    },
+   
+    {
+      "name": "Sản phẩm vừa thêm 1",
       "price": "139.00",
       "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-      "id": 8
+      "id": 9
     }
   ]
 }
