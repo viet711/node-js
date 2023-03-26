@@ -1,15 +1,16 @@
-import  express  from "express";
-import routerProduct from "./router/product.js";
-
-
+import express from "express";
+import productRouter from "./router/product.js";
+import authRouter from "./router/auth.js";
+import mongoose from "mongoose";
 import dotenv from "dotenv";
-dotenv.config();
-const app = express();
 
+const app = express();
+dotenv.config();
+const URL_DB = process.env.URL_DB;
 app.use(express.json());
 
-app.use("/api", routerProduct);
+app.use("/api", productRouter);
+app.use("/api", authRouter);
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server is running on ${process.env.PORT}`);
-});
+mongoose.connect(URL_DB);
+export const viteNodeApp = app;
