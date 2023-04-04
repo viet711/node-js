@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { RemoveProjects, getProjects } from "../../api/projects";
 import Container from "../Content";
-import { Link, Outlet } from "react-router-dom"
+import { Link } from "react-router-dom"
 const Products = () => {
 
     const [data, setdata] = useState([])
 
     useEffect(() => {
         getProjects().then(({ data }) => setdata(data))
-    }, [])
+    }, [data])
     const handleRemove = (id, name) => {
         if (window.confirm(`Bạn có chắc muốn xóa dự án ${name}?`)) {
             RemoveProjects(id).then(() => {
@@ -17,6 +17,10 @@ const Products = () => {
         }
 
     }
+    const handleEdit = (id) => {
+        window.location.href = "/ProductsEdit" + id;
+      };
+
 
     return <>
 
@@ -47,8 +51,10 @@ const Products = () => {
                             </td>
                             <td className="py-3 px-6 text-center">{data.price}</td>
                             <td className="py-3 px-6 text-center">{data.description}</td>
-                            <td className="py-3 px-6 text-center">  <button onClick={() => handleRemove(data._id)} data-name={data.name} data-id={data.id} className="bg-danger "> Remove</button>
-                                {/* <a href=""> <button data-name={data.name} className="bg-success btn-update border-0 p-2 text-lime-50 rounded-md "> Update</button></a> */}
+                            <td classNameName="py-3 px-6 text-center">  <button onClick={() => handleRemove(data._id)} data-name={data.name} data-id={data._id} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mx-2"> Remove</button>
+                                <button onClick={() => handleEdit(data._id)} data-name={data.name} data-id={data._id} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mx-2">   Update
+                                </button>
+
                             </td>
                         </tr>
                     </>
