@@ -12,9 +12,9 @@ const Navbar = () => {
           <span className="text-2xl text-decoration-none text-light block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
             < Link to="/products_add">Thêm</Link >
           </span>
-          <span className="text-2xl text-decoration-none text-light block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+          {/* <span className="text-2xl text-decoration-none text-light block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
             < Link to="/login">login</Link >
-          </span>
+          </span> */}
         
 
 

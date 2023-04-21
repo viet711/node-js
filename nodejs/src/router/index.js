@@ -6,7 +6,7 @@ import routerAuth from "./auth";
 const router = express.Router();
 
 router.use("/products", routerProduct);
-// router.use("/categories", routerCategory);
+router.use("/categories", routerCategory);
 router.use("/auth", routerAuth);
 
 export default router;

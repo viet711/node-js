@@ -18,7 +18,7 @@ const Products = () => {
 
     }
     const handleEdit = (id) => {
-        window.location.href = "/ProductsEdit" + id;
+        window.location.href = "ProductsEdit/" + id;
       };
 
 

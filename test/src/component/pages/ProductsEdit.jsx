@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import Container from "../Content"
-import { UpdateProjects, getProjectsid } from "../../api/projects"
+import { UpdateProjects, getProjects } from "../../api/projects"
 import { useParams } from "react-router-dom"
 
 
@@ -13,7 +13,7 @@ const Products_edit = () => {
     const [description, setDescription] = useState("");
 
     useEffect(() => {
-        getProjectsid(id).then(({ data }) => {
+        getProjects(id).then(({ data }) => {
             setData(data);
             setName(data.name);
             setDescription(data.description);

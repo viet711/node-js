@@ -25,9 +25,7 @@ export const getAll = async (req, res) => {
 };
 export const get = async function (req, res) {
   try {
-    // const { data: product } = await axios.get(`${API_URI}/products/${req.params.id}`);
     const product = await Product.findById(req.params.id);
-    // const product = await Product.findOne({ _id: req.params.id });
 
     if (!product) {
       return res.json({

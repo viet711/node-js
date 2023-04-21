@@ -9,10 +9,10 @@ import {
 } from "../controllers/product.js";
 const router = express.Router();
 
-router.get("/products", getAll);
-router.get("/products/:id", get);
-router.post("/products", create);
-router.patch("/products/:id", updatePatch);
-router.delete("/products/:id", remove);
+router.get("/", getAll);
+router.get("/:id", get);
+router.post("/", create);
+router.put("/:id", updatePatch);
+router.delete("/:id", remove);
 
 export default router;
